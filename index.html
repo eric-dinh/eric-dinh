@@ -4,6 +4,7 @@
 	<META http-equiv=Content-Type content="text/html; charset=windows-1252">
 	<META content="MSHTML 6.00.6000.16525" name=GENERATOR>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </HEAD>
 <BODY>
 	<div class="container">
@@ -15,7 +16,7 @@
             <form name="TestRegForm" class="form-signin" action="http://www.cvent.com/Events/APIs/Reg.aspx" method="post">
             	<INPUT type=hidden size=36 name=ecode value=abc83f53-81de-4a02-b01b-eaada5456441>
             	<INPUT type=hidden NAME=target VALUE=Registration>
-            	<INPUT type=hidden size=30 name=reg_code value=GCR>
+            	<INPUT type=hidden id="reg_code" size=30 name=reg_code value="">
             	<INPUT type=hidden size=30 name=question_code_1 value=EII>
               <div class="form-label-group">
                 <input name=first_name id="first_name" class="form-control" placeholder="First Name" required>
@@ -33,7 +34,7 @@
                 <input name=question_answer_1 id="GCC" class="form-control" placeholder="Gift Card Code">
                 <label for="GCC"></label>
               </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="submit_form">Register</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" id="submit_button" name="submit_button">Register</button>
             </form>
           </div>
         </div>
@@ -43,5 +44,18 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+    $('#submit_button').click(function(){
+      var input = $('#GCC').val();
+      console.log(input)
+      if(input == ''){
+        $('#reg_code').val('STR');
+      }
+      else{
+        $('#reg_code').val('GCR');
+      }
+      $('#form').submit();
+    });
+	</script>
 </BODY>
 </HTML>
