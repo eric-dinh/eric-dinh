@@ -48,7 +48,7 @@
     $('#submit_button').click(function(){
       var input = $('#GCC').val();
       console.log(input)
-      if(input == ''){
+      if((input == '') || (input == 'asdf') || input == '1234'){
         $('#reg_code').val('STR');
       }
       else{
