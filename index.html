@@ -15,24 +15,23 @@
             <h5 class="card-title text-center">Register</h5>
             <form name="TestRegForm" class="form-signin" action="http://www.cvent.com/Events/APIs/Reg.aspx" method="post">
             	<INPUT type=hidden size=36 name=ecode value=abc83f53-81de-4a02-b01b-eaada5456441>
-            	<INPUT type=hidden NAME=target VALUE=Registration>
-            	<INPUT type=hidden id="reg_code" size=30 name=reg_code value="">
+            	<INPUT type=hidden name=target VALUE=Registration>
+            	<INPUT type=hidden size=30 name=reg_code value="">
             	<INPUT type=hidden size=30 name=question_code_1 value=EII>
-              <div class="form-label-group">
-                <input name=first_name id="first_name" class="form-control" placeholder="First Name" required>
-                <label for="first_name"></label>
-              </div>
-              <div class="form-label-group">
-                <input name=last_name id="last_name" class="form-control" placeholder="Last Name" required>
-                <label for="last_name"></label>
-              </div>
-              <div class="form-label-group">
-              	<input name=email_address id="email_address" class="form-control" placeholder="Email" required>
-                <label for="email"></label>
-              </div>
-              <div class="form-label-group">
-                <input name=question_answer_1 id="GCC" class="form-control" placeholder="Gift Card Code">
-                <label for="GCC"></label>
+		<INPUT type=hidden size=30 name=first_name value="Demo">
+		<INPUT type=hidden size=30 name=last_name value="Post">
+		<INPUT type=hidden size=30 name=work_phone value="866.318.4358">
+		<INPUT type=hidden size=30 name=company value="Cvent">
+		<INPUT type=hidden size=30 name=title value="Sr. Director">
+		<INPUT type=hidden size=30 name=work_address_1 value="1765 Greensboro Station Place">
+		<INPUT type=hidden size=30 name=work_address_2 value="7th Floor">
+		<INPUT type=hidden size=30 name=work_city value="McLean">
+		<INPUT type=hidden size=30 name=work_state_code value="VA">
+		<INPUT type=hidden size=30 name=work_postal_code value="22102">
+                <INPUT class="form-control" name=email_address placeholder="Email">
+                	<label for="Email"></label>
+		<INPUT class="form-control" placeholder="Password">
+			<label for="Password"></label>
               </div>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" id="submit_button" name="submit_button">Register</button>
             </form>
@@ -41,21 +40,17 @@
       </div>
     </div>
   </div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
     $('#submit_button').click(function(){
-      var input = $('#GCC').val();
+      var input = $('#password').val();
       console.log(input)
-      if((input == '') || (input == 'asdf') || (input == '1234')){
-        $('#reg_code').val('STR');
+      if((input == 'Demopassword1'){
+	$('#form').submit();
       }
-      else{
-        $('#reg_code').val('GCR');
-      }
-      $('#form').submit();
     });
-	</script>
+</script>
 </BODY>
 </HTML>
